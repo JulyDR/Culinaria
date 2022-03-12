@@ -1,0 +1,148 @@
+---
+layout: default
+title: Homepage
+aperitif:
+  - gericht: Gin Tonic
+    inhalte: Limette | Gurke | Minze
+    preis: 7,00 €
+  - gericht: Tanqueray Flor de Sevilla
+    inhalte: Tonic | Orange | Rosmarin |Eis
+    preis: 7,00 €
+vorspeisen:
+  - gericht: Carpaccio vom Räucherlachs
+    inhalte: Rucola | Senfmarinade | Fenchelsalat | Orangen Vinaigrette
+    preis: 11,00 €
+  - gericht: Hausgemachte Gulaschsuppe
+    inhalte: Rindfleisch | Kartoffel | Paprika | Chili | Schnittlauch-Schmand
+    preis: 6,00 €
+  - gericht: Lammrücken
+    inhalte: Artischocken Knoblauchcreme | Olivenpesto
+    preis: 15,00 €
+  - gericht: Matjes und Tatar
+    inhalte: Rote Bete Apfel | Dillgurke
+    preis: 10,00 €
+hauptspeisen:
+  - gericht: Iberico Filet und Nackensteak
+    inhalte: Gnocchi | Salbei Rahm | Pancetta | Shiitake Pilze
+    preis: 21,00 €
+  - gericht: Wiener Schnitzel aus der Oberschale vom Kalb
+    inhalte: hausgemachter Kartoffel-Gurken Salat | Senfmayonnaise | Preiselbeeren & Zitrone
+    preis: 19,00 €
+  - gericht: Skreifilet gebacken
+    inhalte: gefüllte Teigtaschen | junger Spargel | Fingermöhren | Beurre Blanc | Blumenkohl
+    preis: 23,00 €
+  - gericht: Dry Age Koteleete unter der Tomatenhaube
+    inhalte: Rote Ofen Paprika | Kartoffel-Petersilien Mousse
+    preis: 19,00 €
+dessert:
+  - gericht: Mille-feuille
+    inhalte: Strudelteig | Vanillecreme | karamellisierte Rum Ananas | hausgemachtes weißes Schokoladeneis
+    preis: 8,00 €
+steak:
+  - gericht: Australien Black Angus Rib Eye Steak (ca. 380gr.)
+    inhalte: Salat der Saison | Hausdressing | Steakhaus Fritten | Salsa
+    preis: 34,00 €
+  - gericht: Australien Black Angus Rumpsteak (ca. 300gr.)
+    inhalte: Salat der Saison | Hausdressing | Steakhaus Fritten | Salsa
+    preis: 32,00 €
+  - gericht: Französisch Charluxe Rinderfilet (ca. 240gr.)
+    inhalte: Salat der Saison | Hausdressing | Steakhaus Fritten | Salsa
+    preis: 31,00 €
+---
+
+<!-- Header Banner -->
+<header class="grid">
+    <div class="grid-center col-12 padded-2 bg-image light-text">
+        
+    {% include header-nav-pages.html %}
+    
+    </div>
+</header>
+
+<!-- Menu section  -->
+<section class="padded bg-featured light-text menu grid-center" id="Speisen">
+    <div class="col-12 center">
+        <h2 class="text-lg"> Speisen </h2>
+        <p>Lassen Sie freitgs und samstags abends ihren Gaumen mit unseren leckren und kreativ zubereiteten Speisen verwöhnen. <br>Schauen Sie vorbei, genießen Sie ds Wochenende und lassen bei einem guten Glas Wein einfach die Seele baumeln. </p>
+    </div>
+
+    <!-- First colum -->
+    <div class="col-6_sm-12 padded-2">
+        <h3> Aperitif</h3>
+            <div class="grid">
+                {% for item in page.aperitif %}
+                <div class="col-10 editable">
+                    <p class="margin-0 menu-margin menu-text"> {{item.gericht}} </p>
+                    <p class="small-text"> {{item.inhalte}}  </p>
+                </div>
+                <div class="col-2 editable">
+                    <span class="price"> {{item.preis}} </span>
+                </div>
+                {% endfor %}
+            </div>
+
+
+        <h3> Vorspeisen</h3>
+            <div class="grid">
+                {% for item in page.vorspeisen %}
+                <div class="col-10 editable">
+                    <p class="margin-0 menu-margin menu-text"> {{item.gericht}} </p>
+                    <p class="small-text"> {{item.inhalte}}  </p>
+                </div>
+                <div class="col-2 editable">
+                    <span class="price"> {{item.preis}} </span>
+                </div>
+                {% endfor %}
+            </div>
+    </div>
+
+    <!-- Second colum -->
+    <div class="col-6_sm-12 padded-2 mob-padded-t-0">
+        <h3> Hauptspeisen</h3>
+            <div class="grid">
+                {% for item in page.hauptspeisen %}
+                <div class="col-10 editable">
+                    <p class="margin-0 menu-margin menu-text"> {{item.gericht}} </p>
+                    <p class="small-text"> {{item.inhalte}}  </p>
+                </div>
+                <div class="col-2 editable">
+                    <span class="price"> {{item.preis}} </span>
+                </div>
+                {% endfor %}
+            </div>
+
+        <h3 class ="margin-t-1"> Dessert</h3>
+            <div class="grid">
+                {% for item in page.dessert %}
+                <div class="col-10 editable">
+                    <p class="margin-0 menu-margin menu-text"> {{item.gericht}} </p>
+                    <p class="small-text"> {{item.inhalte}} </p>
+                </div>
+                <div class="col-2 editable">
+                    <span class="price"> {{item.preis}} </span>
+                </div>
+                {% endfor %}
+            </div>
+    </div>  
+</section>       
+
+<section>
+    <div class="col-12 center">
+        <h3> Premium Steaks</h3>
+            <p>Weltweit steht Black Angus Rindfleisch für höchste Qualität und ist bei Gourmetkennern besonders beliebt. Das zarte und saftige Fleisch mit seiner ausgeprägten Marmorierung macht dieses Rindfleisch einfach unverwechselbar und besonders</p>
+            <div class="grid">
+                {% for item in page.steak %}
+                <div class="col-4_sm-0"></div>
+                <div class="col-4_sm-12 center editable">
+                    <p class="margin-0 menu-margin menu-text"> {{item.gericht}} </p>
+                    <p class="small-text"> {{item.inhalte}} </p>
+                </div>
+                <div class="col-2 editable">
+                    <span class="price">  {{item.preis}}</span>
+                </div>
+                <div class="col-2_sm-0"></div>
+                {% endfor %}
+            </div>
+
+        <p class="small-text">Bitte fragen Sie unseren Service nach Allergenen und Zusatzstoffen sowie vegetarischen Alternativen oder einer Weinempfehlung</p>
+</section>       
