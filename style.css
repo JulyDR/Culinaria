@@ -23,16 +23,22 @@ html {scroll-behavior: smooth;}
 .padded-t-2 {padding-top: 2rem;}
 .padded-b-2 {padding-bottom: 2rem;}
 .padded-b-0 {padding-bottom: 0;}
+.padded-0 {padding: 0;}
 
 .left {text-align: left;}
 .center {text-align: center;}
 .right {text-align: right;}
 
+.margin-0 {margin-bottom: 0;}
+.margin-05{margin-bottom: 0.5rem;}
 .margin-1 {margin-bottom: 1rem;}
+.margin-2 {margin-bottom: 2rem;}
+
+.margin-t-0 {margin-top: 0;}
 .margin-t-1 {margin-top: 1rem;}
 
-.margin-0 {margin-bottom: 0;}
-.margin-t-0 {margin-top: 0;}
+.margin-l {margin-left: 1rem;}
+
 .margin-l-r {margin-left: 3rem;
             margin-right: 3rem;}
 
@@ -78,6 +84,7 @@ text-decoration: none;}
 
 .featured-text {color: #12150e;}
 .light-text {color: white;}
+.red-text {color:#65231A}
 
 .text-lg {font-size: 4.5rem;}
 .tight-text {line-height: 0.8;}
@@ -111,14 +118,12 @@ footer h2 {
     margin-bottom: 0.5rem;
 }
 
-.sub-footer {
-    padding-top: 5%;
-}
-
-.sub-footer p {
+.opacity {
     font-size: 0.8rem;
     opacity: 0.8;
 }
+
+.bold {font-weight:800;}
 
 nav a {
     color: inherit;
@@ -201,7 +206,7 @@ nav a {
     background-position: 0% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
 }
 
 /* dropdown menu */
