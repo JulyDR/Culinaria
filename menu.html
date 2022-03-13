@@ -86,7 +86,51 @@ ernst:
     preis1: 6,50
     preis2: 21,-
     beschreibung: Ein Spätburgunder - weiß gekeltert! Dieser Wein verfügt über eine herrliche Spätburgunder-Aromatik, die mit der Lebendigkeit und Frische eines Weißweins daherkommt.  
-    ---
+schneider:
+  - jahr: 2020
+    sorte: Chardonnay
+    art: trocken
+    preis1: 7,50
+    preis2: 24,-
+    beschreibung: Ein frischer, zartgelber und herrlich gelungener Weißwein mit Aromen von exotischen Früchten wie Banane und Guave. Mineralische Nuancen kommen dazu. Auf der Zunge und am Gaumen ist der Schneider-Chardonnay ein weicher und milder Wein mit würzigem, feinfruchtigem Charakter und einem langen eleganten Abgang. 
+  - jahr: 2018
+    sorte: Reisling Alte Reben
+    art: trocken
+    preis1: --
+    preis2: 25,-
+    beschreibung: Für diesen Wein hat Marcus Schneider Trauben von den ältesten Riesling-Rebstöcken im Freidelsheimer Schlossberg verwendet. Das Ergebnis ist bemerkenswet, ein tiefgründiger Charakterwein mit einer exzellenten Länge. Ein Duft von Pfirsischen und Zitrusfrüchten, abgerundet von einem satten Geschmack mit einem schönen Schmelz. 
+pauly:
+  - jahr: 2020
+    sorte: Cuvee "Trinkfluss"
+    art: trocken
+    preis1: 5,50
+    preis2: 18,-
+    beschreibung: Eine leichte Weißwein-Cuvée aus elegantem Weißburgunder, spritzigem Elbling und Riesling. Der ehrliche Moselwein kommt mit einer milden Säure und wenig Alkohol daher und bereitet viel Trinkfreude. 
+  - jahr: 2020
+    sorte: Weißburgunder
+    art: trocken
+    preis1: 6,00
+    preis2: 19,-
+    beschreibung: Reife Birne gepaart mit Scheifer-Mineralität und einer erfrischenden Säure, machen diesen harmonischen Weißburgunder zu einer tollen Reisling-Alternative. Ein Teil der Trauben wird im Barriquefass vergoren, was dem Wein eine gehörige Portion Rückrat verleiht. 
+  - jahr: 2020
+    sorte: Riesling "Generations"
+    art: halbtrocken
+    preis1: 6,00
+    preis2: 19,-
+    beschreibung:Ein typisch mineralischer Mosel-Riesling, der alle drei Generationen des Weinguts Pauly vereint und unwiderstehlichen Trinkspaß bietet. 
+  - jahr: 2020
+    sorte: Riesling "Tres Naris" (drei Nasen)
+    art: trocken
+    preis1: 6,50
+    preis2: 19
+    beschreibung: Der Tres Naris repräsentiert den modernen und authentischen Stil des Weinguts. Der frische udn saftige Fruchtgemschack verführt mit der wunderschönen glasklaren Struktur immer zum nächsten Glas. 
+  - jahr: 2020
+    sorte: Riesling "Purist"
+    art: trocken
+    preis1: 6,50
+    preis2: 22,-
+    beschreibung: Riesling in seiner feinsten From - klar und puristisch und einer unserer Lieblinge. Es ist ein toller WEin für alle "Trockenliebhaber", die müde von all den Alkohol- und Fruchtbomben sind. 
+---                
 
 <!-- Header Banner -->
 <header class="grid">
@@ -219,6 +263,35 @@ ernst:
           <div class="col-12">Weingut H.J. Ernst, Rheingau</div> 
          
           {% for item in page.ernst %}                            
+          <div class="col-1"> </div>
+          <div class="col-1"> {{item.jahr}}</div>
+          <div class="col-4">{{item.sorte}}</div>
+          <div class="col-2">{{item.art}}</div>
+          <div class="col-2 center">{{item.preis1}}</div>
+          <div class="col-2 center">{{item.preis2}}</div>
+
+          <div class="col-12 small-text">{{item.beschreibung}}</div>
+         
+          {% endfor %}
+
+          <div class="col-12">Weingut Markus Schneider, Pfalz</div> 
+         
+          {% for item in page.schneider %}                            
+          <div class="col-1"> </div>
+          <div class="col-1"> {{item.jahr}}</div>
+          <div class="col-4">{{item.sorte}}</div>
+          <div class="col-2">{{item.art}}</div>
+          <div class="col-2 center">{{item.preis1}}</div>
+          <div class="col-2 center">{{item.preis2}}</div>
+
+          <div class="col-12 small-text">{{item.beschreibung}}</div>
+         
+          {% endfor %}
+
+          
+          <div class="col-12">Weingut Axel Pauly, Mosel</div> 
+         
+          {% for item in page.pauly %}                            
           <div class="col-1"> </div>
           <div class="col-1"> {{item.jahr}}</div>
           <div class="col-4">{{item.sorte}}</div>
