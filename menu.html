@@ -48,7 +48,45 @@ steak:
   - gericht: Französisch Charluxe Rinderfilet (ca. 240gr.)<br>Rinderfilet Teriyaki
     inhalte: Shiitake Pilze | Kartoffelterrine | grüner Spargel | Fingermöhren
     preis: 31,00 €
----
+schoenleber:
+  - jahr: 2017
+    sorte: Gutsriesling
+    art: trocken
+    preis1: 5,50
+    preis2: --
+    beschreibung: Dieser Wein ist frisch und fruchtig und passt eigentlich immer, auch einfach mal so. 
+  - jahr: 2017
+    sorte: Gutsriesling
+    art: feinherb
+    preis1: 5,50
+    preis2: --
+    beschreibung: Wer es nicht ganz so trocken mag, liegt mit diesem spritzigen halbtrockenen Wein genau richtig. 
+ernst:
+  - jahr: 2018
+    sorte: Chardonnay
+    art: trocken
+    preis1: 5,50
+    preis2: 17,-
+    beschreibung: Ein mineralischer, feinfruchtig cremiger Chardonnay, der frisch und saftig daherkommt. Er hat eine leichte Säure, ist harmonisch im Abgang und ein guter Begleiter für alle Gerichte. 
+  - jahr: 2018
+    sorte: Grauburgunder
+    art: trocken
+    preis1: 6,50
+    preis2: 21,-
+    beschreibung: Ein klassischer, säurearmer Brugunder mit kräftigen mineralischen Noten, der gerne zu Fisch- und Geflügelgerichten gewählt wird. 
+  - jahr: 2017
+    sorte: Riesling Classic
+    art: trocken
+    preis1: 6,-
+    preis2: 20,-
+    beschreibung: Ein klassischer feinfruchtiger und herzhafter Riesling, sehr harmonisch und mit einer feinen Restsüße. Dieser Weißwein hat ein klares Riesling-Bukett und schmeckt ein wenig nach Zitrusfrüchten. 
+  - jahr: 2017
+    sorte: RBlanc de Noirs Spätburgunder
+    art: trocken
+    preis1: 6,50
+    preis2: 21,-
+    beschreibung: Ein Spätburgunder - weiß gekeltert! Dieser Wein verfügt über eine herrliche Spätburgunder-Aromatik, die mit der Lebendigkeit und Frische eines Weißweins daherkommt.  
+    ---
 
 <!-- Header Banner -->
 <header class="grid">
@@ -146,3 +184,52 @@ steak:
 
         <p class="small-text">Bitte fragen Sie unseren Service nach Allergenen und Zusatzstoffen sowie vegetarischen Alternativen oder einer Weinempfehlung</p>
 </section>       
+
+<!-- Wein section  -->
+<section class="padded menu grid-center">
+  <div class="col-12 center">
+      <h2 class="text-lg"> Weinkarte </h2>
+      <p>Es ist so weit...<br>Ab sofort können Sie bei uns eine Auswahl an Weinen zum "Mitnahmepreis" erwerben. Stöbern Sie gerne hier in unserer Weinboutique und lassen sich inspirieren.<br>Wir beraten Sie gerne!</p>
+  </div>
+          
+  <div class="col-12">
+    <h3 class="center red-text bold"> Weissweine</h3>
+    <p class="center red-text">Deutschland</p>
+        <div class="grid">
+          <div class="col-8"></div>
+          <div class="col-2 center"> 0,2l </div>
+          <div class="col-2 center"> 0,75l </div>
+                  
+          <!-- Wein 1 -->
+          
+          <div class="col-12">Weingut Schönleber-Blümlein, Rheinghau</div> 
+         
+          {% for item in page.schoenleber %}                            
+          <div class="col-1"> </div>
+          <div class="col-1"> {{item.jahr}}</div>
+          <div class="col-4">{{item.sorte}}</div>
+          <div class="col-2">{{item.art}}</div>
+          <div class="col-2 center">{{item.preis1}}</div>
+          <div class="col-2 center">{{item.preis2}}</div>
+
+          <div class="col-12 small-text">{{item.beschreibung}}</div>
+         
+          {% endfor %}
+
+          <div class="col-12">Weingut H.J. Ernst, Rheingau</div> 
+         
+          {% for item in page.ernst %}                            
+          <div class="col-1"> </div>
+          <div class="col-1"> {{item.jahr}}</div>
+          <div class="col-4">{{item.sorte}}</div>
+          <div class="col-2">{{item.art}}</div>
+          <div class="col-2 center">{{item.preis1}}</div>
+          <div class="col-2 center">{{item.preis2}}</div>
+
+          <div class="col-12 small-text">{{item.beschreibung}}</div>
+         
+          {% endfor %}
+
+        </div>
+  </div>
+</section>
