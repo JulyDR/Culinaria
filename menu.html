@@ -117,7 +117,7 @@ pauly:
     art: halbtrocken
     preis1: 6,00
     preis2: 19,-
-    beschreibung:Ein typisch mineralischer Mosel-Riesling, der alle drei Generationen des Weinguts Pauly vereint und unwiderstehlichen Trinkspaß bietet. 
+    beschreibung: Ein typisch mineralischer Mosel-Riesling, der alle drei Generationen des Weinguts Pauly vereint und unwiderstehlichen Trinkspaß bietet. 
   - jahr: 2020
     sorte: Riesling "Tres Naris" (drei Nasen)
     art: trocken
@@ -130,6 +130,12 @@ pauly:
     preis1: 6,50
     preis2: 22,-
     beschreibung: Riesling in seiner feinsten From - klar und puristisch und einer unserer Lieblinge. Es ist ein toller WEin für alle "Trockenliebhaber", die müde von all den Alkohol- und Fruchtbomben sind. 
+sekternst
+  - jahr: 2018
+    sorte: Eltviller Taubenberg Riesling sekternst  
+    art: trocken
+    preis2: 18,-
+    beschreibung: Ein Sektgenuss mit klaren Traubenaromen und feiner Restsüße, der zu unkompliziertem Trinkgenuss einlädt. 
 ---                
 
 <!-- Header Banner -->
@@ -305,4 +311,29 @@ pauly:
 
         </div>
   </div>
+
+  <div class="col-12">
+    <h3 class="center red-text bold"> Sekt | Perlweine</h3>
+    <p class="center red-text">Deutschland</p>
+        <div class="grid">
+          <div class="col-8"></div>
+          <div class="col-2 center"> 0,25l</div>
+          <div class="col-2 center"> 0,75l </div>
+                  
+          <!-- Wein 1 -->
+          
+          <div class="col-12">Weingut H.J. Ernst, Rheingau</div> 
+         
+          {% for item in page.sekternst %}                            
+          <div class="col-1"> </div>
+          <div class="col-1"> {{item.jahr}}</div>
+          <div class="col-4">{{item.sorte}}</div>
+          <div class="col-4">{{item.art}}</div>
+          <div class="col-2 center">{{item.preis2}}</div>
+
+          <div class="col-12 small-text">{{item.beschreibung}}</div>
+         
+          {% endfor %}
+      </div>
+    </div>
 </section>
